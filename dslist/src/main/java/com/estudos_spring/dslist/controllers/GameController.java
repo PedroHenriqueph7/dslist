@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.estudos_spring.dslist.dto.GameDTO;
 import com.estudos_spring.dslist.dto.GameMinDTO;
-import com.estudos_spring.dslist.entities.Game;
 import com.estudos_spring.dslist.services.GameService;
 
 // O controlador que implementa API
@@ -21,7 +21,7 @@ public class GameController {
     private GameService gameService;
 
     @GetMapping(value = "/{id}")
-    public GameMinDTO gameById(@PathVariable Long id){
+    public GameDTO gameById(@PathVariable Long id){
         return gameService.gameFindByID(id);
     }
 
