@@ -29,4 +29,5 @@ public class GameController {
     public List<GameMinDTO> findAllGames() {
         return gameService.findAll();
     }
+
 }
